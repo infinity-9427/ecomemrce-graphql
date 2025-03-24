@@ -1,0 +1,47 @@
+{
+  "name": "entrophic-ecommerce",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/src/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "prestart": "prisma generate && prisma migrate deploy",
+    "start": "npm run build && node dist/src/index.js",
+    "dev": "tsx --env-file=.env --watch src/index.ts"
+  },
+  "keywords": [],
+  "author": "infinity dev",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/express": "^5.0.1",
+    "@types/node": "^22.13.10",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2"
+  },
+  "dependencies": {
+    "@apollo/server": "^4.11.3",
+    "@google/generative-ai": "^0.24.0",
+    "@graphql-tools/merge": "^9.0.24",
+    "@prisma/client": "^6.5.0",
+    "@types/body-parser": "^1.19.5",
+    "@types/cors": "^2.8.17",
+    "@types/express-fileupload": "^1.5.1",
+    "@types/morgan": "^1.9.9",
+    "@types/node-cron": "^3.0.11",
+    "axios": "^1.8.4",
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "express-fileupload": "^1.5.1",
+    "express-validator": "^7.2.1",
+    "graphql-tag": "^2.12.6",
+    "helmet": "^8.1.0",
+    "joi": "^17.13.3",
+    "morgan": "^1.10.0",
+    "node-cron": "^3.0.3",
+    "prisma": "^6.5.0"
+  }
+}
